@@ -1,3 +1,4 @@
+//function that creates rows and cells based on user input of height and width
 function makeGrid(height,width) {
     const table = document.getElementById("pixelCanvas");
     let grid = '';
@@ -15,7 +16,7 @@ function makeGrid(height,width) {
     addClickEventToCells();
 
 }
-
+// function that gets values for height and width and uses them to call makeGrid()
 function formSubmission() {
     event.preventDefault();
     const height = document.getElementById('inputHeight').value;
@@ -23,6 +24,7 @@ function formSubmission() {
     makeGrid(height, width);
 }
 
+// function that adds click events to all cells
 function addClickEventToCells() {
     const colorPicker = document.getElementById("colorPicker");
     const cells = document.getElementsByClassName('cell');
